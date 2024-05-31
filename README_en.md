@@ -1,4 +1,4 @@
-English | [简体中文](README_ch.md) | [हिन्दी](./doc/doc_i18n/README_हिन्द.md) | [日本語](./doc/doc_i18n/README_日本語.md) | [한국인](./doc/doc_i18n/README_한국어.md) | [Pу́сский язы́к](./doc/doc_i18n/README_Ру́сский_язы́к.md)
+English | [简体中文](README.md) | [हिन्दी](./doc/doc_i18n/README_हिन्द.md) | [日本語](./doc/doc_i18n/README_日本語.md) | [한국인](./doc/doc_i18n/README_한국어.md) | [Pу́сский язы́к](./doc/doc_i18n/README_Ру́сский_язы́к.md)
 
 <p align="center">
  <img src="./doc/PaddleOCR_log.png" align="middle" width = "600"/>
@@ -24,6 +24,9 @@ PaddleOCR aims to create multilingual, awesome, leading, and practical OCR tools
 <div align="center">
     <img src="./doc/imgs_results/ch_ppocr_mobile_v2.0/00006737.jpg" width="800">
 </div>
+
+## 🚀 Community
+PaddleOCR is being oversight by a [PMC](https://github.com/PaddlePaddle/PaddleOCR/issues/12122). Issues and PRs will be reviewed on a best-effort basis. For a complete overview of PaddlePaddle community, please visit [community](https://github.com/PaddlePaddle/community).
 
 ## 📣 Recent updates
 - **🔥2023.8.7 Release PaddleOCR[release/2.7](https://github.com/PaddlePaddle/PaddleOCR/tree/release/2.7)**
@@ -56,7 +59,6 @@ PaddleOCR aims to create multilingual, awesome, leading, and practical OCR tools
 
 
 ## 🌟 Features
-
 PaddleOCR support a variety of cutting-edge algorithms related to OCR, and developed industrial featured models/solution [PP-OCR](./doc/doc_en/ppocr_introduction_en.md)、 [PP-Structure](./ppstructure/README.md) and [PP-ChatOCR](https://aistudio.baidu.com/aistudio/projectdetail/6488689) on this basis, and get through the whole process of data production, model training, compression, inference and deployment.
 
 <div align="center">
@@ -67,7 +69,6 @@ PaddleOCR support a variety of cutting-edge algorithms related to OCR, and devel
 
 
 ## ⚡ Quick Experience
-
 - Web online experience
     - PP-OCRv4 online experience：https://aistudio.baidu.com/aistudio/projectdetail/6611435
     - PP-ChatOCR online experience：https://aistudio.baidu.com/aistudio/projectdetail/6488689
@@ -77,38 +78,14 @@ PaddleOCR support a variety of cutting-edge algorithms related to OCR, and devel
     - PP-ChatOCR：https://aistudio.baidu.com/aistudio/modelsdetail?modelId=332
 - Mobile demo experience：[Installation DEMO](https://ai.baidu.com/easyedge/app/openSource?from=paddlelite)(Based on EasyEdge and Paddle-Lite, support iOS and Android systems)
 
-<a name="Technical exchange and cooperation"></a>
-
 ## 📖 Technical exchange and cooperation
-- ([PaddleX](http://10.136.157.23:8080/paddle/paddleX))provides a one-stop full-process high-efficiency development platform for flying paddle ecological model training, pressure, and push. Its mission is to help AI technology quickly land, and its vision is to make everyone an AI Developer!
+- PaddleX provides a one-stop full-process high-efficiency development platform for flying paddle ecological model training, pressure, and push. Its mission is to help AI technology quickly land, and its vision is to make everyone an AI Developer!
    - PaddleX currently covers areas such as image classification, object detection, image segmentation, 3D, OCR, and time series prediction, and has built-in 36 basic single models, such as RP-DETR, PP-YOLOE, PP-HGNet, PP-LCNet, PP- LiteSeg, etc.; integrated 12 practical industrial solutions, such as PP-OCRv4, PP-ChatOCR, PP-ShiTu, PP-TS, vehicle-mounted road waste detection, identification of prohibited wildlife products, etc.
    - PaddleX provides two AI development modes: "Toolbox" and "Developer". The toolbox mode can tune key hyperparameters without code, and the developer mode can perform single-model training, push and multi-model serial inference with low code, and supports both cloud and local terminals.
    - PaddleX also supports joint innovation and development, profit sharing! At present, PaddleX is rapidly iterating, and welcomes the participation of individual developers and enterprise developers to create a prosperous AI technology ecosystem!
 
-Scan the QR code below on WeChat to add operation students, and reply [paddlex], operation students will invite you to join the official communication group for more efficient questions and answers.
-
-<div align="center">
-<img src="https://raw.githubusercontent.com/PaddlePaddle/PaddleOCR/dygraph/doc/joinus_paddlex.jpg"  width = "150" height = "150",caption='' />
-<p>[PaddleX] technology exchange group QR code</p>
-</div>
-
-<a name="book"></a>
 ## 📚 E-book: *Dive Into OCR*
-- [Dive Into OCR ](./doc/doc_en/ocr_book_en.md)
-
-<a name="Community"></a>
-
-## 👫 Community
-
-- For international developers, we regard [PaddleOCR Discussions](https://github.com/PaddlePaddle/PaddleOCR/discussions) as our international community platform. All ideas and questions can be discussed here in English.
-
-- For Chinese develops, Scan the QR code below with your Wechat, you can join the official technical discussion group. For richer community content, please refer to [中文README](README_ch.md), looking forward to your participation.
-
-<div align="center">
-<img src="https://raw.githubusercontent.com/PaddlePaddle/PaddleOCR/dygraph/doc/joinus.PNG"  width = "150" height = "150" />
-</div>
-
-<a name="Supported-Chinese-model-list"></a>
+- [Dive Into OCR](./doc/doc_en/ocr_book_en.md)
 
 ## 🛠️ PP-OCR Series Model List（Update on September 8th）
 
@@ -122,7 +99,6 @@ Scan the QR code below on WeChat to add operation students, and reply [paddlex],
 - For a new language request, please refer to [Guideline for new language_requests](#language_requests).
 - For structural document analysis models, please refer to [PP-Structure models](./ppstructure/docs/models_list_en.md).
 
-<a name="tutorials"></a>
 ## 📖 Tutorials
 - [Environment Preparation](./doc/doc_en/environment_en.md)
 - [PP-OCR 🔥](./doc/doc_en/ppocr_introduction_en.md)
@@ -143,11 +119,11 @@ Scan the QR code below on WeChat to add operation students, and reply [paddlex],
         - [Mobile](./deploy/lite/readme.md)
         - [Paddle2ONNX](./deploy/paddle2onnx/readme.md)
         - [PaddleCloud](./deploy/paddlecloud/README.md)
-        - [Benchmark](./doc/doc_en/benchmark_en.md)  
+        - [Benchmark](./doc/doc_en/benchmark_en.md)
 - [PP-Structure 🔥](./ppstructure/README.md)
     - [Quick Start](./ppstructure/docs/quickstart_en.md)
     - [Model Zoo](./ppstructure/docs/models_list_en.md)
-    - [Model training](./doc/doc_en/training_en.md)  
+    - [Model training](./doc/doc_en/training_en.md)
         - [Layout Analysis](./ppstructure/layout/README.md)
         - [Table Recognition](./ppstructure/table/README.md)
         - [Key Information Extraction](./ppstructure/kie/README.md)
@@ -160,7 +136,7 @@ Scan the QR code below on WeChat to add operation students, and reply [paddlex],
     - [Text recognition](./doc/doc_en/algorithm_overview_en.md)
     - [End-to-end OCR](./doc/doc_en/algorithm_overview_en.md)
     - [Table Recognition](./doc/doc_en/algorithm_overview_en.md)
-    - [Key Information Extraction](./doc/doc_en/algorithm_overview_en.md)  
+    - [Key Information Extraction](./doc/doc_en/algorithm_overview_en.md)
     - [Add New Algorithms to PaddleOCR](./doc/doc_en/add_new_algorithm_en.md)
 - Data Annotation and Synthesis
     - [Semi-automatic Annotation Tool: PPOCRLabel](https://github.com/PFCCLab/PPOCRLabel/blob/main/README.md)
@@ -182,8 +158,6 @@ Scan the QR code below on WeChat to add operation students, and reply [paddlex],
 - [References](./doc/doc_en/reference_en.md)
 - [License](#LICENSE)
 
-
-<a name="Visualization"></a>
 ## 👀 Visualization [more](./doc/doc_en/visualization_en.md)
 
 <details open>
@@ -214,7 +188,7 @@ Scan the QR code below on WeChat to add operation students, and reply [paddlex],
 <details open>
 <summary>PP-StructureV2</summary>
 
-- layout analysis + table recognition  
+- layout analysis + table recognition
 <div align="center">
     <img src="./ppstructure/docs/table/ppstructure.GIF" width="800">
 </div>
@@ -235,7 +209,7 @@ Scan the QR code below on WeChat to add operation students, and reply [paddlex],
 - RE (Relation Extraction)
 <div align="center">
     <img src="https://user-images.githubusercontent.com/25809855/186094813-3a8e16cc-42e5-4982-b9f4-0134dfb5688d.png" width="600">
-</div>  
+</div>
 
 <div align="center">
     <img src="https://user-images.githubusercontent.com/14270174/185393805-c67ff571-cf7e-4217-a4b0-8b396c4f22bb.jpg" width="600">
@@ -244,10 +218,6 @@ Scan the QR code below on WeChat to add operation students, and reply [paddlex],
 <div align="center">
     <img src="https://user-images.githubusercontent.com/14270174/185540080-0431e006-9235-4b6d-b63d-0b3c6e1de48f.jpg" width="600">
 </div>
-
-</details>
-
-<a name="language_requests"></a>
 ## 🇺🇳 Guideline for New Language Requests
 
 If you want to request a new language support, a PR with 1 following files are needed：
@@ -259,7 +229,5 @@ If your language has unique elements, please tell me in advance within any way, 
 
 More details, please refer to [Multilingual OCR Development Plan](https://github.com/PaddlePaddle/PaddleOCR/issues/1048).
 
-
-<a name="LICENSE"></a>
 ## 📄 License
 This project is released under <a href="https://github.com/PaddlePaddle/PaddleOCR/blob/master/LICENSE">Apache 2.0 license</a>

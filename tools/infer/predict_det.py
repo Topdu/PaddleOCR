@@ -32,11 +32,11 @@ from ppocr.data import create_operators, transform
 from ppocr.postprocess import build_post_process
 import json
 
-logger = get_logger()
-
 
 class TextDetector(object):
-    def __init__(self, args):
+    def __init__(self, args, logger=None):
+        if logger is None:
+            logger = get_logger()
         self.args = args
         self.det_algorithm = args.det_algorithm
         self.use_onnx = args.use_onnx
@@ -158,7 +158,7 @@ class TextDetector(object):
                 model_precision=args.precision,
                 batch_size=1,
                 data_shape="dynamic",
-                save_path=None,
+                save_path=None,  # not used if logger is not None
                 inference_config=self.config,
                 pids=pid,
                 process_name=None,
@@ -178,6 +178,14 @@ class TextDetector(object):
         rect[1] = tmp[np.argmin(diff)]
         rect[3] = tmp[np.argmax(diff)]
         return rect
+
+    def pad_polygons(self, polygon, max_points):
+        padding_size = max_points - len(polygon)
+        if padding_size == 0:
+            return polygon
+        last_point = polygon[-1]
+        padding = np.repeat([last_point], padding_size, axis=0)
+        return np.vstack([polygon, padding])
 
     def clip_det_res(self, points, img_height, img_width):
         for pno in range(points.shape[0]):
@@ -209,6 +217,13 @@ class TextDetector(object):
                 box = np.array(box)
             box = self.clip_det_res(box, img_height, img_width)
             dt_boxes_new.append(box)
+
+        if len(dt_boxes_new) > 0:
+            max_points = max(len(polygon) for polygon in dt_boxes_new)
+            dt_boxes_new = [
+                self.pad_polygons(polygon, max_points) for polygon in dt_boxes_new
+            ]
+
         dt_boxes = np.array(dt_boxes_new)
         return dt_boxes
 
@@ -383,10 +398,20 @@ class TextDetector(object):
 if __name__ == "__main__":
     args = utility.parse_args()
     image_file_list = get_image_file_list(args.image_dir)
-    text_detector = TextDetector(args)
     total_time = 0
     draw_img_save_dir = args.draw_img_save_dir
     os.makedirs(draw_img_save_dir, exist_ok=True)
+
+    # logger
+    log_file = args.save_log_path
+    if os.path.isdir(args.save_log_path) or (
+        not os.path.exists(args.save_log_path) and args.save_log_path.endswith("/")
+    ):
+        log_file = os.path.join(log_file, "benchmark_detection.log")
+    logger = get_logger(log_file=log_file)
+
+    # create text detector
+    text_detector = TextDetector(args, logger)
 
     if args.warmup:
         img = np.random.uniform(0, 255, [640, 640, 3]).astype(np.uint8)
